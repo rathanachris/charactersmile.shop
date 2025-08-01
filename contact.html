@@ -5,13 +5,14 @@ include('includes/dbconnection.php');?>
 <!DOCTYPE html>
 <html lang="en-km" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark" data-a11y-animated-images="system" data-a11y-link-underlines="true" data-turbo-loaded="">
  <head>
-<title>smileshop.com</title>
+<title>chrisshop.fd.com</title>
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <meta http-equiv="X-UA-Compatible" content="chrome=1">
  <meta name="viewport" content="width"=device-widh, initial-scale="1"/>    
  <meta name="google-site-verification" content="JpaRdNODN2zM-fb-tIxHiGKyMCXJXu8gl3aBUG3A4to" />
  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet.css">
- <link rel="icon" href="image/chrisrathana.2.png">
+ <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://www.chrisshop.com/">
+ <link rel="icon" href="image/fd.chrisrathana.jpeg">
  <link rel="stylesheet" type="text/css" href="css/style.css">
 <!-- font awesome cdn link -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -78,14 +79,26 @@ required></textarea>
 </section>
 <!-- Contact Section end -->
 <!-- Google Maps Embed -->
-<h2>Our Location</h2>
-<iframe
-src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15651.3369221324212
-n!2sin!4v169762209317615m2!1sen!2sin" width="100%" height="800px"
-d77.5733936513d11.27359315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.115e0!3m2!1se style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</section>
-
+ <h2>Our Location</h2>
+ </html>
+ <body>
+<!-- From jsDelivr CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+<!-- Custom CSS -->
+  <style>
+   #map {
+    height: 40vh;
+    width: 100%;
+ }
+</style>
+</head>
+<body>
+ <div id="map"></div>
+<!-- Local Leaflet JS -->
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js">
+</script>
 <!-- prettier-ignore -->
+ <hr class="col-1 my-5 mx-0">
 <center>
 </footer> 
     <p>® 2025 Website & copyright.&team!</p>
@@ -96,9 +109,22 @@ d77.5733936513d11.27359315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.115e0!3m2!1se s
 <a href="#"><i class="fab fa-tiktok"></i></a>
 </center>
 </footer>
+<!-- Your Custom JavaScript -->
 <script>
-
+  // Create map and set center [Latitude, Longitude] and zoom level
+     var map = L.map('map').setView([11.5225, 104.8865], 13); // Phnom Penh
+        
+  // Add OpenStreetMap tiles
+   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+   maxZoom: 19,
+   attribution: '© OpenStreetMap'
+   }).addTo(map);
+   11
+   // Add a marker
+     var marker = L.marker([11.5225, 104.8865]).addTo(map);
+     marker.bindPopup("<b>Hello.World</b><br>Phnom Penh.").openPopup();
 </script>
+<!-- prettier-ignore -->
 </body>
 </div></div></div></div></div></div></head></div></div></div></div></div></body>
 </html>
