@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'khmer', Cambodia, sans-serif;
   text-decoration: none;
   list-style: none;
 }
@@ -128,7 +128,7 @@ header label.fas {
     display: flex;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
    header .far-bars{
        desplay: block;
    }
@@ -158,7 +158,7 @@ header label.fas {
   color: #999;
   text-transform: none;
 }
-@media (max-width: 450px){
+@media (max-width: 320px){
    html{
        font-size: 50%;
     }
@@ -187,6 +187,7 @@ p {
 }
 .btn:hover {
     background: #d35400;
+}
 /* Container Section */
 .catacary {
   padding: 40px 20px;
